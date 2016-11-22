@@ -28,7 +28,6 @@ end
 
 get '/named-cat' do
   p params
-  @age = params[:age]
   @name = params[:name]
   erb :index
 end
