@@ -21,7 +21,14 @@ get '/route3' do
   "This is route 3"
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Amigo","Oscar","Viking"].sample
+  erb :index
+end
+
+get '/named-cat' do
+  p params
+  @age = params[:age]
+  @name = params[:name]
   erb :index
 end
